@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscador de Times</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="search-section">
+        <h1>⚽ Buscador de Clubes</h1>
+        <p>Pesquise por times do mundo inteiro para ver suas estatísticas.</p>
+
+        <div class="search-box">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Digite o nome do time (ex: Flamengo, Real Madrid)..."
+          />
+          <button id="searchButton">Buscar</button>
+        </div>
+
+        <div id="statusMessage" class="status-message hidden">
+          Buscando informações...
+        </div>
+      </header>
+
+      <main id="teamCard" class="team-card">
+        <div class="team-header">
+          <div class="logo-container">
+            <img
+              id="teamLogo"
+              src=""
+              alt="Escudo do Time"
+            />
+          </div>
+          <div class="title-container">
+            <h2 id="teamName">Clube de Regatas do Flamengo</h2>
+            <span id="teamCountry" class="badge">Brasil</span>
+          </div>
+        </div>
+
+        <div class="team-info">
+          <h3>Informações do Clube</h3>
+          <ul class="info-list">
+            <li>
+              <strong>📅 Fundação:</strong>
+              <span id="teamFounded">1895</span>
+            </li>
+            <li>
+              <strong>🏟️ Estádio:</strong>
+              <span id="teamStadium">Maracanã</span>
+            </li>
+            <li>
+              <strong>👥 Capacidade:</strong>
+              <span id="teamCapacity">78.838 espectadores</span>
+            </li>
+            <li>
+              <strong>📍 Cidade:</strong>
+              <span id="teamCity">Rio de Janeiro</span>
+            </li>
+          </ul>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
