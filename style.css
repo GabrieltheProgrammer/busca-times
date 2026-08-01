@@ -1,21 +1,19 @@
-/* Variáveis de cores para facilitar a customização */
 :root {
-  --primary-color: #2c3e50;
-  --secondary-color: #e74c3c;
-  --bg-color: #f4f7f6;
+  --primary-color: #1b4332;
+  --primary-color-dark: #0f2a1e;
+  --secondary-color: #f4a261;
+  --bg-color: #f2f6f4;
   --card-bg: #ffffff;
-  --text-color: #333333;
-  --text-muted: #7f8c8d;
-  --border-radius: 12px;
+  --text-color: #2b2b2b;
+  --text-muted: #6c7a72;
+  --border-radius: 18px;
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -25,170 +23,153 @@ body {
   min-height: 100vh;
   padding: 20px;
 }
-
 .container {
   width: 100%;
   max-width: 600px;
 }
-
 /* Estilos da Busca */
 .search-section {
   text-align: center;
   margin-bottom: 30px;
 }
-
 .search-section h1 {
   color: var(--primary-color);
   font-size: 2.5rem;
   margin-bottom: 10px;
+  letter-spacing: -0.5px;
 }
-
 .search-section p {
   color: var(--text-muted);
   margin-bottom: 20px;
 }
-
 .search-box {
   display: flex;
   gap: 10px;
   margin-bottom: 15px;
 }
-
 #searchInput {
   flex: 1;
-  padding: 15px;
+  padding: 15px 20px;
   font-size: 1rem;
-  border: 2px solid #ddd;
-  border-radius: var(--border-radius);
+  border: 2px solid #dde5e1;
+  border-radius: 999px;
   outline: none;
-  transition: border-color 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
-
 #searchInput:focus {
   border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(27, 67, 50, 0.1);
 }
-
 #searchButton {
-  padding: 15px 25px;
+  padding: 15px 28px;
   background-color: var(--primary-color);
   color: white;
   font-weight: bold;
   border: none;
-  border-radius: var(--border-radius);
+  border-radius: 999px;
   cursor: pointer;
   transition:
     background-color 0.3s,
     transform 0.1s;
 }
-
 #searchButton:hover {
-  background-color: #1a252f;
+  background-color: var(--primary-color-dark);
 }
-
 #searchButton:active {
   transform: scale(0.98);
 }
-
 .status-message {
   color: var(--secondary-color);
   font-weight: bold;
   height: 20px;
 }
-
 .hidden {
   display: none;
 }
-
 /* Estilos do Card do Time */
 .team-card {
   background-color: var(--card-bg);
   border-radius: var(--border-radius);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 15px 35px rgba(27, 67, 50, 0.1);
   overflow: hidden;
   transition: opacity 0.3s ease;
 }
-
 .team-header {
-  background-color: var(--primary-color);
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-color-dark));
   color: white;
-  padding: 30px;
+  padding: 32px;
   display: flex;
   align-items: center;
   gap: 20px;
 }
-
 .logo-container {
   width: 100px;
   height: 100px;
   background-color: white;
-  border-radius: 50%;
+  border-radius: 28px;
   padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
 }
-
 #teamLogo {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
 }
-
 .title-container h2 {
   font-size: 1.8rem;
   margin-bottom: 8px;
 }
-
 .badge {
   background-color: var(--secondary-color);
-  padding: 5px 12px;
-  border-radius: 20px;
+  color: var(--primary-color-dark);
+  padding: 5px 14px;
+  border-radius: 999px;
   font-size: 0.85rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
 .team-info {
-  padding: 30px;
+  padding: 30px 32px;
 }
-
 .team-info h3 {
   margin-bottom: 20px;
   color: var(--primary-color);
-  border-bottom: 2px solid #f0f0f0;
+  border-bottom: 2px solid #eef2f0;
   padding-bottom: 10px;
 }
-
 .info-list {
   list-style: none;
 }
-
 .info-list li {
   margin-bottom: 15px;
   font-size: 1.1rem;
   display: flex;
   align-items: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  transition: background-color 0.2s;
 }
-
+.info-list li:hover {
+  background-color: var(--bg-color);
+}
 .info-list li strong {
   width: 130px;
   color: var(--text-muted);
 }
-
 /* Responsividade para telas menores */
 @media (max-width: 480px) {
   .team-header {
     flex-direction: column;
     text-align: center;
   }
-
   .info-list li {
     flex-direction: column;
     align-items: flex-start;
   }
-
   .info-list li strong {
     margin-bottom: 5px;
   }
